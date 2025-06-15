@@ -6,7 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import time
 import os
 
-testv1 = "Google Search Tests"
+testv1 = "Google Search Testss"
 
 def take_screenshot(driver, name):
     os.makedirs('reports/screenshots', exist_ok=True)

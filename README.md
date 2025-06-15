@@ -48,9 +48,7 @@
 - Başarılı/başarısız durumlar PR üzerinde gösterilir.
 
 ---
-
 docker run -it --rm \
-  -p 8080:8080 \
-  cloudflare/cloudflared:latest tunnel --url http://host.docker.internal:55010
+  cloudflare/cloudflared:latest tunnel --url http://host.docker.internal:8080
 
 Her adım tamamlandığında, Jenkins arayüzünden test raporlarını ve ekran görüntülerini görebilirsiniz. Sorularınız olursa bana ulaşabilirsiniz!

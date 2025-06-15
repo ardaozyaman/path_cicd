@@ -48,6 +48,7 @@
 - Başarılı/başarısız durumlar PR üzerinde gösterilir.
 
 ---
+for macos tunnel (Cloudflare / safety one)
 docker run -it --rm \
   cloudflare/cloudflared:latest tunnel --url http://host.docker.internal:8080
 

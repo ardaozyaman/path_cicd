@@ -1,0 +1,84 @@
+istenilen proje: 
+
+tasks Instructions:
+
+Establish a CI/CD pipeline that automates the execution of the UI test cases.
+
+Configure the pipeline to initiate tests for new pull requests or when changes are pushed to an existing pull request
+
+Use any CI/CD tools such as Jenkins, GitLab CI/CD, Travis CI, or CircleCI.
+
+Generate and store test reports and screenshots after each test run.
+
+Integrate test results as required checks for pull requests.
+
+
+
+yapılacaklar:
+
+
+✅ Python Selenium UI Testleri için CI/CD Planı (Jenkins + GitHub)
+🔹 1. Proje Hazırlığı (Yerel Geliştirme Ortamı)
+ Python projesi oluştur (virtual environment dahil)
+
+ Selenium, pytest, pytest-html, webdriver-manager gibi gerekli kütüphaneleri requirements.txt dosyasına yaz
+
+ Basit bir Selenium testi yaz (örnek: Google araması testi)
+
+ Başarılı ve başarısız test durumları için ekran görüntüsü alınmasını ekle
+
+ Test çıktılarının reports/ klasörüne HTML rapor olarak kaydedilmesini sağla
+
+🔹 2. GitHub Entegrasyonu
+ GitHub’da yeni bir repo oluştur
+
+ Tüm test kodunu ve requirements.txt, pytest.ini, Jenkinsfile dosyasını bu repoya push et
+
+ .gitignore dosyasını ekleyerek gereksiz dosyaları hariç tut (örnek: __pycache__, venv/, reports/)
+
+🔹 3. Jenkins Kurulumu ve Yapılandırması
+ Jenkins’i yerel ya da uzaktaki bir sunucuya kur
+
+ Aşağıdaki eklentileri yükle:
+
+GitHub Plugin
+
+GitHub Pull Request Builder
+
+Pipeline
+
+HTML Publisher
+
+ Python kurulumunu Jenkins agent'ına yap
+
+ Jenkins içinde GitHub bağlantısı (credentials/token) ayarla
+
+🔹 4. Pipeline (Jenkinsfile) Oluşturma
+ Projenin kök dizinine Jenkinsfile dosyası oluştur
+
+ Aşağıdaki adımları içeren pipeline'ı yaz:
+
+Kodları GitHub’dan çek
+
+Python bağımlılıklarını yükle (pip install)
+
+Testleri pytest ile çalıştır
+
+Test çıktısı olarak HTML rapor ve ekran görüntüsü üret
+
+HTML raporunu publishHTML ile Jenkins arayüzüne yükle
+
+archiveArtifacts ile raporları ve ekran görüntülerini arşivle
+
+🔹 5. GitHub Webhook & PR Tetikleme
+ GitHub repo ayarlarında Jenkins webhook tanımla (/github-webhook/)
+
+ Jenkins projesinde GitHub hook trigger for GITScm polling ayarını aktif et
+
+ PR açıldığında ya da güncellendiğinde pipeline otomatik tetiklensin
+
+🔹 6. Test Sonuçlarını PR Üzerinde Gösterme
+ GitHub repo ayarlarında “required checks” kısmına Jenkins build'ini ekle
+
+ Jenkins üzerinden başarılı/başarısız durumlarda PR üzerinde status gösterimi sağla (GitHub Commit Status API)
+

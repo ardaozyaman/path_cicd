@@ -1,58 +1,43 @@
-import pytest
+import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-import time
 import os
+import time
 
-testv165 = "Google Search Testsshkjgkh"
+class InsiderCareersTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        options = Options()
+        options.add_argument('--headless')
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
+        options.add_argument('--disable-gpu')
+        options.add_argument('--window-size=1920,1080')
+        options.binary_location = '/usr/bin/chromium'
+        chromedriver_paths = ['/usr/lib/chromium/chromedriver', '/usr/bin/chromedriver']
+        chromedriver = None
+        for path in chromedriver_paths:
+            if os.path.exists(path):
+                chromedriver = path
+                break
+        if not chromedriver:
+            raise RuntimeError('chromedriver not found in system paths!')
+        cls.driver = webdriver.Chrome(service=Service(chromedriver), options=options)
+        os.makedirs('reports/screenshots', exist_ok=True)
 
-def take_screenshot(driver, name):
-    os.makedirs('reports/screenshots', exist_ok=True)
-    path = f"reports/screenshots/{name}.png"
-    driver.save_screenshot(path)
-    return path
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
 
-@pytest.fixture
-def driver():
-    options = Options()
-    options.add_argument('--headless')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
-    options.add_argument('--disable-gpu')
-    options.add_argument('--window-size=1920,1080')
-    options.binary_location = '/usr/bin/chromium'
+    def test_find_dream_job_button(self):
+        self.driver.get("https://useinsider.com/careers")
+        time.sleep(3)
+        # Kontrol edilecek elementin varlığı
+        elements = self.driver.find_elements(By.XPATH, '//a[@href="https://useinsider.com/open-positions/" and contains(@class, "btn-info") and contains(@class, "rounded") and contains(@class, "py-3")]')
+        self.driver.save_screenshot('reports/screenshots/find_dream_job.png')
+        self.assertTrue(len(elements) > 0, 'Find your dream job butonu bulunamadı!')
 
-    # Use system chromedriver instead of webdriver-manager
-    chromedriver_paths = ['/usr/lib/chromium/chromedriver', '/usr/bin/chromedriver']
-    chromedriver = None
-    for path in chromedriver_paths:
-        if os.path.exists(path):
-            chromedriver = path
-            break
-    if not chromedriver:
-        raise RuntimeError('chromedriver not found in system paths!')
-    driver = webdriver.Chrome(service=Service(chromedriver), options=options)
-    yield driver
-    driver.quit()
-
-def test_google_search_success(driver):
-
-    driver.get("https://www.google.com")
-    box = driver.find_element(By.NAME, "q")
-    box.send_keys("Selenium Python")
-    box.submit()
-    time.sleep(2)
-    assert "Selenium" in driver.title
-    take_screenshot(driver, "success")
-
-def test_google_search_fail(driver):
-    driver.get("https://www.google.com")
-    box = driver.find_element(By.NAME, "q")
-    box.send_keys("asdasdasd1234567890")
-    box.submit()
-    time.sleep(2)
-    # Sadece sayfa başarıyla yüklendi mi ve arama kutusu tekrar görünüyor mu kontrolü
-    assert driver.find_element(By.NAME, "q") is not None
-    take_screenshot(driver, "fail")
+if __name__ == "__main__":
+    unittest.main()

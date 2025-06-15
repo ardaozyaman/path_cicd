@@ -7,7 +7,7 @@ import os
 import time
 
 
-test = "Insider Careers Test"
+
 class InsiderCareersTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

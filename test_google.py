@@ -6,6 +6,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 import time
 import os
 
+test = "Google Search Tests"
+
 def take_screenshot(driver, name):
     os.makedirs('reports/screenshots', exist_ok=True)
     path = f"reports/screenshots/{name}.png"
@@ -21,7 +23,7 @@ def driver():
     driver.quit()
 
 def test_google_search_success(driver):
-    
+
     driver.get("https://www.google.com")
     box = driver.find_element(By.NAME, "q")
     box.send_keys("Selenium Python")

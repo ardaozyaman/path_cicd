@@ -21,6 +21,7 @@ def driver():
     driver.quit()
 
 def test_google_search_success(driver):
+    
     driver.get("https://www.google.com")
     box = driver.find_element(By.NAME, "q")
     box.send_keys("Selenium Python")

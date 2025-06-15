@@ -74,4 +74,4 @@
     sudo chown -R 1000:1000 /Users/arda.ozyaman/Documents/cicd_demo
     ```
 
-Her adım tamamlandığında Jenkins arayüzünden test raporlarını ve ekran görüntülerini görebilirsiniz. Sorularınız olursa bana ulaşabilirsiniz! 
+Her adım tamamlandığında Jenkins arayüzünden test raporlarını ve ekran görüntülerini görebilirsiniz. Sorularınız olursa bana ulaşabilirsiniz!

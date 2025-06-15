@@ -21,6 +21,7 @@ pipeline {
             }
             post {
                 always {
+                    archiveArtifacts artifacts: 'reports/screenshots/*.png', allowEmptyArchive: true
                     archiveArtifacts artifacts: 'reports/**/*', allowEmptyArchive: true
                     publishHTML(target: [allowMissing: true, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'reports', reportFiles: 'report.html', reportName: 'Test Report'])
                 }

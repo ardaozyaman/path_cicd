@@ -1,6 +1,6 @@
 # Python Selenium UI Testleri için CI/CD Pipeline Dökümantasyonu
 
-## 1. Proje Kurulumu
+## 1. Proje Kurulum
 
 1. Python 3 ve pip kurulu olmalı.
 2. Proje klasöründe sanal ortam oluşturun ve bağımlılıkları yükleyin:

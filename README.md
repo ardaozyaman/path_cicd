@@ -32,7 +32,7 @@
 3. Jenkins ile GitHub bağlantısı için token/credentials ekleyin.
 4. Proje köküne eklenen `Jenkinsfile` ile pipeline oluşturun.
 
-## 4. Pipeline Adımları
+## 4. Pipeline Adımlarıı
 
 - Kodları GitHub’dan çeker.
 - Python bağımlılıklarını yükler.

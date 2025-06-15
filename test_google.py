@@ -14,6 +14,7 @@ def take_screenshot(driver, name):
 
 @pytest.fixture
 def driver():
+    """Fixture to set up and tear down the Selenium WebDriver."""
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)

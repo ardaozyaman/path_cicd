@@ -15,7 +15,7 @@ def take_screenshot(driver, name):
 @pytest.fixture
 def driver():
     options = webdriver.ChromeOptions()
-    options.add_argument('--headless')
+    
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     yield driver
     driver.quit()

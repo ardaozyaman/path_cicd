@@ -1,5 +1,22 @@
-Started by GitHub push by ardaozyaman
-Obtained Jenkinsfile from git https://github.com/ardaozyaman/path_cicd
+Started by user arda
+
+Checking out git https://github.com/ardaozyaman/path_cicd into /var/jenkins_home/workspace/path_2_cicd@script/226363a038d8fc72506a33ab72e939e7e1c3b4e0855f6916ba4abc7fc218a2f1 to read Jenkinsfile
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/path_2_cicd@script/226363a038d8fc72506a33ab72e939e7e1c3b4e0855f6916ba4abc7fc218a2f1/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/ardaozyaman/path_cicd # timeout=10
+Fetching upstream changes from https://github.com/ardaozyaman/path_cicd
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+ > git fetch --tags --force --progress -- https://github.com/ardaozyaman/path_cicd +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision caa7dcb3b9e3775e5d5e1d961e20168dd0b96992 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f caa7dcb3b9e3775e5d5e1d961e20168dd0b96992 # timeout=10
+Commit message: "test"
+ > git rev-list --no-walk a7d9d543cbb31fc487362299d677c97fbaced3d5 # timeout=10
 [Pipeline] Start of Pipeline
 [Pipeline] node
 Running on Jenkins
@@ -8,133 +25,258 @@ Running on Jenkins
 [Pipeline] stage
 [Pipeline] { (Declarative: Checkout SCM)
 [Pipeline] checkout
-ERROR: Checkout failed
-java.nio.file.AccessDeniedException: /var/jenkins_home/workspace/path_2_cicd
-	at java.base/sun.nio.fs.UnixException.translateToIOException(Unknown Source)
-	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(Unknown Source)
-	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(Unknown Source)
-	at java.base/sun.nio.fs.UnixFileSystemProvider.createDirectory(Unknown Source)
-	at java.base/java.nio.file.Files.createDirectory(Unknown Source)
-	at java.base/java.nio.file.Files.createAndCheckIsDirectory(Unknown Source)
-	at java.base/java.nio.file.Files.createDirectories(Unknown Source)
-	at hudson.FilePath.mkdirs(FilePath.java:3731)
-	at hudson.FilePath$Mkdirs.invoke(FilePath.java:1397)
-	at hudson.FilePath$Mkdirs.invoke(FilePath.java:1392)
-	at hudson.FilePath.act(FilePath.java:1213)
-	at hudson.FilePath.act(FilePath.java:1196)
-	at hudson.FilePath.mkdirs(FilePath.java:1387)
-	at PluginClassLoader for git//hudson.plugins.git.GitSCM.createClient(GitSCM.java:844)
-	at PluginClassLoader for git//hudson.plugins.git.GitSCM._checkout(GitSCM.java:1300)
-	at PluginClassLoader for git//hudson.plugins.git.GitSCM.checkout(GitSCM.java:1278)
-	at PluginClassLoader for workflow-scm-step//org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:136)
-	at PluginClassLoader for workflow-scm-step//org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:101)
-	at PluginClassLoader for workflow-scm-step//org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:88)
-	at PluginClassLoader for workflow-step-api//org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:49)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-ERROR: Maximum checkout retry attempts reached, aborting
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/ardaozyaman/path_cicd
+ > git init /var/jenkins_home/workspace/path_2_cicd # timeout=10
+Fetching upstream changes from https://github.com/ardaozyaman/path_cicd
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+ > git fetch --tags --force --progress -- https://github.com/ardaozyaman/path_cicd +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/ardaozyaman/path_cicd # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision caa7dcb3b9e3775e5d5e1d961e20168dd0b96992 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f caa7dcb3b9e3775e5d5e1d961e20168dd0b96992 # timeout=10
+Commit message: "test"
 [Pipeline] }
 [Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/path_2_cicd/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/ardaozyaman/path_cicd # timeout=10
+Fetching upstream changes from https://github.com/ardaozyaman/path_cicd
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+ > git fetch --tags --force --progress -- https://github.com/ardaozyaman/path_cicd +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision caa7dcb3b9e3775e5d5e1d961e20168dd0b96992 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f caa7dcb3b9e3775e5d5e1d961e20168dd0b96992 # timeout=10
+Commit message: "test"
 [Pipeline] }
-[Pipeline] // node
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Setup Python)
+[Pipeline] sh
++ python3 -m venv venv
+[Pipeline] sh
++ . venv/bin/activate
++ deactivate nondestructive
++ [ -n  ]
++ [ -n  ]
++ [ -n  -o -n  ]
++ [ -n  ]
++ unset VIRTUAL_ENV
++ unset VIRTUAL_ENV_PROMPT
++ [ ! nondestructive = nondestructive ]
++ VIRTUAL_ENV=/var/jenkins_home/workspace/path_2_cicd/venv
++ export VIRTUAL_ENV
++ _OLD_VIRTUAL_PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ PATH=/var/jenkins_home/workspace/path_2_cicd/venv/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ export PATH
++ [ -n  ]
++ [ -z  ]
++ _OLD_VIRTUAL_PS1=$ 
++ PS1=(venv) $ 
++ export PS1
++ VIRTUAL_ENV_PROMPT=(venv) 
++ export VIRTUAL_ENV_PROMPT
++ [ -n  -o -n  ]
++ pip install --upgrade pip
+Requirement already satisfied: pip in ./venv/lib/python3.11/site-packages (23.0.1)
+Collecting pip
+  Using cached pip-25.1.1-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.0.1
+    Uninstalling pip-23.0.1:
+      Successfully uninstalled pip-23.0.1
+Successfully installed pip-25.1.1
++ pip install -r requirements.txt
+Collecting selenium (from -r requirements.txt (line 1))
+  Using cached selenium-4.33.0-py3-none-any.whl.metadata (7.5 kB)
+Collecting pytest (from -r requirements.txt (line 2))
+  Using cached pytest-8.4.0-py3-none-any.whl.metadata (7.7 kB)
+Collecting pytest-html (from -r requirements.txt (line 3))
+  Using cached pytest_html-4.1.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting webdriver-manager (from -r requirements.txt (line 4))
+  Using cached webdriver_manager-4.0.2-py2.py3-none-any.whl.metadata (12 kB)
+Collecting urllib3~=2.4.0 (from urllib3[socks]~=2.4.0->selenium->-r requirements.txt (line 1))
+  Using cached urllib3-2.4.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting trio~=0.30.0 (from selenium->-r requirements.txt (line 1))
+  Using cached trio-0.30.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting trio-websocket~=0.12.2 (from selenium->-r requirements.txt (line 1))
+  Using cached trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting certifi>=2025.4.26 (from selenium->-r requirements.txt (line 1))
+  Using cached certifi-2025.6.15-py3-none-any.whl.metadata (2.4 kB)
+Collecting typing_extensions~=4.13.2 (from selenium->-r requirements.txt (line 1))
+  Using cached typing_extensions-4.13.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting websocket-client~=1.8.0 (from selenium->-r requirements.txt (line 1))
+  Using cached websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+Collecting attrs>=23.2.0 (from trio~=0.30.0->selenium->-r requirements.txt (line 1))
+  Using cached attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
+Collecting sortedcontainers (from trio~=0.30.0->selenium->-r requirements.txt (line 1))
+  Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Collecting idna (from trio~=0.30.0->selenium->-r requirements.txt (line 1))
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting outcome (from trio~=0.30.0->selenium->-r requirements.txt (line 1))
+  Using cached outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+Collecting sniffio>=1.3.0 (from trio~=0.30.0->selenium->-r requirements.txt (line 1))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting wsproto>=0.14 (from trio-websocket~=0.12.2->selenium->-r requirements.txt (line 1))
+  Using cached wsproto-1.2.0-py3-none-any.whl.metadata (5.6 kB)
+Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]~=2.4.0->selenium->-r requirements.txt (line 1))
+  Using cached PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+Collecting iniconfig>=1 (from pytest->-r requirements.txt (line 2))
+  Using cached iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting packaging>=20 (from pytest->-r requirements.txt (line 2))
+  Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pluggy<2,>=1.5 (from pytest->-r requirements.txt (line 2))
+  Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting pygments>=2.7.2 (from pytest->-r requirements.txt (line 2))
+  Using cached pygments-2.19.1-py3-none-any.whl.metadata (2.5 kB)
+Collecting jinja2>=3.0.0 (from pytest-html->-r requirements.txt (line 3))
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting pytest-metadata>=2.0.0 (from pytest-html->-r requirements.txt (line 3))
+  Using cached pytest_metadata-3.1.1-py3-none-any.whl.metadata (8.6 kB)
+Collecting requests (from webdriver-manager->-r requirements.txt (line 4))
+  Using cached requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
+Collecting python-dotenv (from webdriver-manager->-r requirements.txt (line 4))
+  Using cached python_dotenv-1.1.0-py3-none-any.whl.metadata (24 kB)
+Collecting MarkupSafe>=2.0 (from jinja2>=3.0.0->pytest-html->-r requirements.txt (line 3))
+  Using cached MarkupSafe-3.0.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.0 kB)
+Collecting h11<1,>=0.9.0 (from wsproto>=0.14->trio-websocket~=0.12.2->selenium->-r requirements.txt (line 1))
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting charset_normalizer<4,>=2 (from requests->webdriver-manager->-r requirements.txt (line 4))
+  Using cached charset_normalizer-3.4.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (35 kB)
+Using cached selenium-4.33.0-py3-none-any.whl (9.4 MB)
+Using cached trio-0.30.0-py3-none-any.whl (499 kB)
+Using cached trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+Using cached typing_extensions-4.13.2-py3-none-any.whl (45 kB)
+Using cached urllib3-2.4.0-py3-none-any.whl (128 kB)
+Using cached PySocks-1.7.1-py3-none-any.whl (16 kB)
+Using cached websocket_client-1.8.0-py3-none-any.whl (58 kB)
+Using cached pytest-8.4.0-py3-none-any.whl (363 kB)
+Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+Using cached pytest_html-4.1.1-py3-none-any.whl (23 kB)
+Using cached webdriver_manager-4.0.2-py2.py3-none-any.whl (27 kB)
+Using cached attrs-25.3.0-py3-none-any.whl (63 kB)
+Using cached certifi-2025.6.15-py3-none-any.whl (157 kB)
+Using cached iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Using cached MarkupSafe-3.0.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (23 kB)
+Using cached outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+Using cached packaging-25.0-py3-none-any.whl (66 kB)
+Using cached pygments-2.19.1-py3-none-any.whl (1.2 MB)
+Using cached pytest_metadata-3.1.1-py3-none-any.whl (11 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached wsproto-1.2.0-py3-none-any.whl (24 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using cached python_dotenv-1.1.0-py3-none-any.whl (20 kB)
+Using cached requests-2.32.4-py3-none-any.whl (64 kB)
+Using cached charset_normalizer-3.4.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (142 kB)
+Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Installing collected packages: sortedcontainers, websocket-client, urllib3, typing_extensions, sniffio, python-dotenv, pysocks, pygments, pluggy, packaging, MarkupSafe, iniconfig, idna, h11, charset_normalizer, certifi, attrs, wsproto, requests, pytest, outcome, jinja2, webdriver-manager, trio, pytest-metadata, trio-websocket, pytest-html, selenium
+
+Successfully installed MarkupSafe-3.0.2 attrs-25.3.0 certifi-2025.6.15 charset_normalizer-3.4.2 h11-0.16.0 idna-3.10 iniconfig-2.1.0 jinja2-3.1.6 outcome-1.3.0.post0 packaging-25.0 pluggy-1.6.0 pygments-2.19.1 pysocks-1.7.1 pytest-8.4.0 pytest-html-4.1.1 pytest-metadata-3.1.1 python-dotenv-1.1.0 requests-2.32.4 selenium-4.33.0 sniffio-1.3.1 sortedcontainers-2.4.0 trio-0.30.0 trio-websocket-0.12.2 typing_extensions-4.13.2 urllib3-2.4.0 webdriver-manager-4.0.2 websocket-client-1.8.0 wsproto-1.2.0
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run Tests)
+[Pipeline] sh
++ . venv/bin/activate
++ deactivate nondestructive
++ [ -n  ]
++ [ -n  ]
++ [ -n  -o -n  ]
++ [ -n  ]
++ unset VIRTUAL_ENV
++ unset VIRTUAL_ENV_PROMPT
++ [ ! nondestructive = nondestructive ]
++ VIRTUAL_ENV=/var/jenkins_home/workspace/path_2_cicd/venv
++ export VIRTUAL_ENV
++ _OLD_VIRTUAL_PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ PATH=/var/jenkins_home/workspace/path_2_cicd/venv/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ export PATH
++ [ -n  ]
++ [ -z  ]
++ _OLD_VIRTUAL_PS1=$ 
++ PS1=(venv) $ 
++ export PS1
++ VIRTUAL_ENV_PROMPT=(venv) 
++ export VIRTUAL_ENV_PROMPT
++ [ -n  -o -n  ]
++ pytest
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.4.0, pluggy-1.6.0
+rootdir: /var/jenkins_home/workspace/path_2_cicd
+configfile: pytest.ini
+plugins: html-4.1.1, metadata-3.1.1
+collected 2 items
+
+
+test_google.py .F                                                        [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_google_search_fail ____________________________
+
+driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="925078d100170f79917932a5c00a71ad")>
+
+    def test_google_search_fail(driver):
+        driver.get("https://www.google.com")
+        box = driver.find_element(By.NAME, "q")
+        box.send_keys("asdasdasd1234567890")
+        box.submit()
+        time.sleep(2)
+        try:
+>           assert "No results found" in driver.page_source
+E           assert 'No results found' in '<html><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz...amp;k=6LdLLIMbAAAAAIl-KLj9p1ePhM-4LCCDbjtJLqRO" style="width: 100%; height: 100%;"></iframe></div></div></body></html>'
+E            +  where '<html><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz...amp;k=6LdLLIMbAAAAAIl-KLj9p1ePhM-4LCCDbjtJLqRO" style="width: 100%; height: 100%;"></iframe></div></div></body></html>' = <selenium.webdriver.chrome.webdriver.WebDriver (session="925078d100170f79917932a5c00a71ad")>.page_source
+
+test_google.py:57: AssertionError
+- Generated html report: file:///var/jenkins_home/workspace/path_2_cicd/reports/report.html -
+=========================== short test summary info ============================
+FAILED test_google.py::test_google_search_fail - assert 'No results found' in '<html><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz...amp;k=6LdLLIMbAAAAAIl-KLj9p1ePhM-4LCCDbjtJLqRO" style="width: 100%; height: 100%;"></iframe></div></div></body></html>'
+ +  where '<html><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz...amp;k=6LdLLIMbAAAAAIl-KLj9p1ePhM-4LCCDbjtJLqRO" style="width: 100%; height: 100%;"></iframe></div></div></body></html>' = <selenium.webdriver.chrome.webdriver.WebDriver (session="925078d100170f79917932a5c00a71ad")>.page_source
+========================= 1 failed, 1 passed in 10.42s =========================
+
+Post stage
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] publishHTML
+[htmlpublisher] Archiving HTML reports...
+[htmlpublisher] Archiving at BUILD level /var/jenkins_home/workspace/path_2_cicd/reports to /var/jenkins_home/jobs/path_2_cicd/builds/7/htmlreports/Test_20Report
+[htmlpublisher] Copying recursive using current thread
+[Pipeline] }
+[Pipeline] // stage
 [Pipeline] stage
 [Pipeline] { (Declarative: Post Actions)
-Error when executing always post condition:
-java.lang.NoSuchMethodError: No such DSL method 'cleanWs' found among steps [archive, bat, build, catchError, checkout, deleteDir, dir, echo, envVarsForTool, error, fileExists, getContext, git, input, isUnix, library, libraryResource, load, mail, milestone, node, parallel, powershell, properties, publishHTML, pwd, pwsh, readFile, readTrusted, resolveScm, retry, script, sh, sleep, stage, stash, step, timeout, tm, tool, unarchive, unstable, unstash, validateDeclarativePipeline, waitForBuild, waitUntil, warnError, withContext, withCredentials, withEnv, wrap, writeFile, ws] or symbols [GitUsernamePassword, agent, all, allBranchesSame, allOf, always, any, anyOf, apiToken, apiTokenProperty, architecture, archiveArtifacts, artifactManager, assembla, authorInChangelog, batchFile, bitbucket, bitbucketServer, booleanParam, branch, browser, buildButton, buildDiscarder, buildDiscarders, buildRetention, buildSingleRevisionOnly, buildingTag, builtInNode, caseInsensitive, caseSensitive, certificate, cgit, changeRequest, changelog, changelogBase, changelogToBranch, changeset, checkoutOption, checkoutToSubdirectory, choice, choiceParam, cleanAfterCheckout, cleanBeforeCheckout, clock, cloneOption, command, computerRetentionCheckInterval, consoleUrlProvider, cps, credentials, cron, crumb, default, defaultDisplayUrlProvider, defaultFolderConfiguration, defaultView, demand, disableConcurrentBuilds, disableRestartFromStage, disableResume, discoverOtherRefs, discoverOtherRefsTrait, diskSpace, diskSpaceMonitor, downstream, dumb, durabilityHint, envVars, envVarsFilter, environment, equals, experimentalFlags, expression, file, fileParam, filePath, fingerprint, fingerprints, firstBuildChangelog, fisheye, frameOptions, freeStyle, freeStyleJob, fromScm, fromSource, git, gitBranchDiscovery, gitHooks, gitLab, gitList, gitSCM, gitTagDiscovery, gitTool, gitUsernamePassword, gitWeb, gitblit, github, githubProjectProperty, githubPush, gitiles, gogs, headRegexFilter, headWildcardFilter, hyperlink, hyperlinkToModels, ignoreOnPush, inbound, installSource, isRestartedRun, jdk, jgit, jgitapache, jnlp, jobBuildDiscarder, jobName, kiln, label, lastDuration, lastFailure, lastGrantedAuthorities, lastStable, lastSuccess, legacy, legacySCM, lfs, list, local, localBranch, localBranchTrait, location, logRotator, loggedInUsersCanDoAnything, mailer, masterBuild, maven, maven3Mojos, mavenErrors, mavenGlobalConfig, mavenMojos, mavenWarnings, modernSCM, multiBranchProjectDisplayNaming, multibranch, myView, namedBranchesDifferent, node, nodeProperties, none, nonresumable, not, organizationFolder, overrideIndexTriggers, paneStatus, parallelsAlwaysFailFast, parameters, password, pattern, perBuildTag, permanent, phabricator, pipeline, pipelineTriggers, plainText, plugin, pollSCM, preserveStashes, projectNamingStrategy, proxy, pruneStaleBranch, pruneStaleTag, pruneTags, queueItemAuthenticator, quietPeriod, rateLimit, rateLimitBuilds, redmine, refSpecs, remoteName, resourceRoot, responseTime, retainOnlyVariables, rhodeCode, run, runParam, schedule, scmGit, scmRetryCount, scriptApproval, scriptApprovalLink, search, security, shell, simpleBuildDiscarder, skipDefaultCheckout, skipStagesAfterUnstable, slave, sourceRegexFilter, sourceWildcardFilter, sparseCheckout, sparseCheckoutPaths, sshUserPrivateKey, standard, status, string, stringParam, submodule, submoduleOption, suppressAutomaticTriggering, suppressFolderAutomaticTriggering, swapSpace, tag, teamFoundation, text, textParam, timezone, tmpSpace, toolLocation, triggeredBy, unsecured, untrusted, upstream, userIdentity, userSeed, usernameColonPassword, usernamePassword, viewgit, viewsTabBar, weather, zip] or globals [currentBuild, env, params, pipeline, scm]
-	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.DSL.invokeMethod(DSL.java:219)
-	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsScript.invokeMethod(CpsScript.java:124)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:98)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1225)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:41)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
-	at PluginClassLoader for script-security//org.kohsuke.groovy.sandbox.impl.Checker$1.call(Checker.java:180)
-	at PluginClassLoader for script-security//org.kohsuke.groovy.sandbox.GroovyInterceptor.onMethodCall(GroovyInterceptor.java:23)
-	at PluginClassLoader for script-security//org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SandboxInterceptor.onMethodCall(SandboxInterceptor.java:163)
-	at PluginClassLoader for script-security//org.kohsuke.groovy.sandbox.impl.Checker$1.call(Checker.java:178)
-	at PluginClassLoader for script-security//org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:182)
-	at PluginClassLoader for script-security//org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:152)
-	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.sandbox.SandboxInvoker.methodCall(SandboxInvoker.java:17)
-	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.LoggingInvoker.methodCall(LoggingInvoker.java:118)
-	at WorkflowScript.run(WorkflowScript:33)
-	at org.jenkinsci.plugins.pipeline.modeldefinition.ModelInterpreter.delegateAndExecute(ModelInterpreter.groovy:139)
-	at org.jenkinsci.plugins.pipeline.modeldefinition.ModelInterpreter.runPostConditions(ModelInterpreter.groovy:728)
-	at org.jenkinsci.plugins.pipeline.modeldefinition.ModelInterpreter.catchRequiredContextForNode(ModelInterpreter.groovy:390)
-	at org.jenkinsci.plugins.pipeline.modeldefinition.ModelInterpreter.runPostConditions(ModelInterpreter.groovy:727)
-	at com.cloudbees.groovy.cps.CpsDefaultGroovyMethods.each(CpsDefaultGroovyMethods:2125)
-	at com.cloudbees.groovy.cps.CpsDefaultGroovyMethods.each(CpsDefaultGroovyMethods:2110)
-	at com.cloudbees.groovy.cps.CpsDefaultGroovyMethods.each(CpsDefaultGroovyMethods:2151)
-	at org.jenkinsci.plugins.pipeline.modeldefinition.ModelInterpreter.runPostConditions(ModelInterpreter.groovy:717)
-	at org.jenkinsci.plugins.pipeline.modeldefinition.ModelInterpreter.runPostConditions(ModelInterpreter.groovy)
-	at org.jenkinsci.plugins.pipeline.modeldefinition.ModelInterpreter.executePostBuild(ModelInterpreter.groovy:695)
-	at ___cps.transform___(Native Method)
-	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ContinuationGroup.methodCall(ContinuationGroup.java:90)
-	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.dispatchOrArg(FunctionCallBlock.java:114)
-	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.fixName(FunctionCallBlock.java:78)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:72)
-	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ConstantBlock.eval(ConstantBlock.java:21)
-	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.Next.step(Next.java:83)
-	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.Continuable.run0(Continuable.java:147)
-	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.SandboxContinuable.access$001(SandboxContinuable.java:17)
-	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.SandboxContinuable.run0(SandboxContinuable.java:49)
-	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThread.runNextChunk(CpsThread.java:180)
-	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.run(CpsThreadGroup.java:419)
-	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:327)
-	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:292)
-	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService.lambda$wrap$4(CpsVmExecutorService.java:140)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at hudson.remoting.SingleLaneExecutorService$1.run(SingleLaneExecutorService.java:139)
-	at jenkins.util.ContextResettingExecutorService$1.run(ContextResettingExecutorService.java:28)
-	at jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:68)
-	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.call(CpsVmExecutorService.java:53)
-	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.call(CpsVmExecutorService.java:50)
-	at org.codehaus.groovy.runtime.GroovyCategorySupport$ThreadCategoryInfo.use(GroovyCategorySupport.java:136)
-	at org.codehaus.groovy.runtime.GroovyCategorySupport.use(GroovyCategorySupport.java:275)
-	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService.lambda$categoryThreadFactory$0(CpsVmExecutorService.java:50)
-	at java.base/java.lang.Thread.run(Unknown Source)
-
+[Pipeline] deleteDir
 [Pipeline] }
 [Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
 [Pipeline] End of Pipeline
-Also:   hudson.remoting.ProxyException: org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: 139e783f-80a0-432b-8dd4-47d4dc9c6f53
-hudson.remoting.ProxyException: java.nio.file.AccessDeniedException: /var/jenkins_home/workspace/path_2_cicd
-	at java.base/sun.nio.fs.UnixException.translateToIOException(Unknown Source)
-	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(Unknown Source)
-	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(Unknown Source)
-	at java.base/sun.nio.fs.UnixFileSystemProvider.createDirectory(Unknown Source)
-	at java.base/java.nio.file.Files.createDirectory(Unknown Source)
-	at java.base/java.nio.file.Files.createAndCheckIsDirectory(Unknown Source)
-	at java.base/java.nio.file.Files.createDirectories(Unknown Source)
-	at hudson.FilePath.mkdirs(FilePath.java:3731)
-	at hudson.FilePath$Mkdirs.invoke(FilePath.java:1397)
-	at hudson.FilePath$Mkdirs.invoke(FilePath.java:1392)
-	at hudson.FilePath.act(FilePath.java:1213)
-	at hudson.FilePath.act(FilePath.java:1196)
-	at hudson.FilePath.mkdirs(FilePath.java:1387)
-	at PluginClassLoader for git//hudson.plugins.git.GitSCM.createClient(GitSCM.java:844)
-	at PluginClassLoader for git//hudson.plugins.git.GitSCM._checkout(GitSCM.java:1300)
-	at PluginClassLoader for git//hudson.plugins.git.GitSCM.checkout(GitSCM.java:1278)
-	at PluginClassLoader for workflow-scm-step//org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:136)
-	at PluginClassLoader for workflow-scm-step//org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:101)
-	at PluginClassLoader for workflow-scm-step//org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:88)
-	at PluginClassLoader for workflow-step-api//org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:49)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
+ERROR: script returned exit code 1
 Finished: FAILURE

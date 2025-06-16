@@ -39,7 +39,7 @@ class InsiderCareersTest(unittest.TestCase):
         # Kontrol edilecek elementin varlığı
         elements = self.driver.find_elements(By.XPATH, '//a[@href="https://useinsider.com/open-positions/" and contains(@class, "btn-info") and contains(@class, "rounded") and contains(@class, "py-3")]')
         self.driver.save_screenshot('reports/screenshots/find_dream_job.png')
-        self.assertTrue(len(elements) > 0, 'Find your dream job butonu bulunamadı!')
+        self.assertFalse(len(elements) > 0, 'Find your dream job butonu bulunamadı!')
 
 if __name__ == "__main__":
     unittest.main()

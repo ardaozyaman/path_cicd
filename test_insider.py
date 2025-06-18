@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 import os
 import time
 
-test = "Insider Careers Test - Find Your Dream Job Button Test, kemal"
+test = "Insider Careers Test - Find Your Dream Job Button Test,"
 
 class InsiderCareersTest(unittest.TestCase):
     @classmethod
